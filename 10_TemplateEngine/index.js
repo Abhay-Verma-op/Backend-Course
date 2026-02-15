@@ -27,4 +27,10 @@ app.post('/submit-user',(req,resp)=>{
 resp.render('SubmitUser',req.body)
 })
 
+app.get('/users',(req,resp)=>{
+    const users=['abhay','akshay','ajay','mayank']
+    const isLogin =true
+    resp.render("users" ,{users:users,isLogin:isLogin})
+})
+
 app.listen(3200)
